@@ -1,15 +1,13 @@
 // Listen for the key press
 window.addEventListener('keydown', (e) => {
-    // Lets check the key code values
-    // console.log(e);
-    
-    // Check the key code we are getting
+    // Key code of the key pressed
     let keycode = e.keyCode;
-    // console.log(keycode);
 
-    // Get the corresponding div tag for the key pressed
-    const key = document.querySelector(`[data-key="${keycode}"]`);
-    // console.log(key);
-
+    // Fetch audio file with that data-key
+    const audio = document.querySelector(`audio[data-key="${keycode}"]`);
     
+    // To prevent null value return
+    if(!audio) return;
+
+    audio.play();
 })
