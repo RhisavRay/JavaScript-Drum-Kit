@@ -5,6 +5,7 @@ window.addEventListener('keydown', (e) => {
 
     // Fetch audio file with that data-key
     const audio = document.querySelector(`audio[data-key="${keycode}"]`);
+    const key = document.querySelector(`.key[data-key="${keycode}"]`);
     
     // To prevent null value return
     if(!audio) return;
