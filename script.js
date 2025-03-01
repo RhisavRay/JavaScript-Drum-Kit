@@ -9,5 +9,7 @@ window.addEventListener('keydown', (e) => {
     // To prevent null value return
     if(!audio) return;
 
+    // Reset audio for every button press
+    audio.currentTime = 0;
     audio.play();
 })
